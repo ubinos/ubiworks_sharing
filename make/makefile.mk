@@ -10,6 +10,13 @@ include $(LIBRARY_DIR)/ubinos/make/common.mk
 
 %: common-% ;
 
+ifeq ("$(wildcard $(CONFIG_DIR)/$(CONFIG_NAME).cmake)","") # if $(CONFIG_DIR)/$(CONFIG_NAME).cmake is not exist then
+ifneq ($(findstring library/,$(CONFIG_DIR)),) # if $(CONFIG_DIR) is in library dir then
+all config configd build clean cleand rebuild rebuildd dserver xdserver load run xrun reset debug xdebug attach xattach env cleanenv xconfig menuconfig doc test:
+	make -C $(CONFIG_DIR)/../make -f makefile.mk                OUTPUT_BASE_DIR=$(realpath $(OUTPUT_BASE_DIR)) LIBRARY_DIR=$(realpath $(LIBRARY_DIR)) CONFIG_DIR=$(realpath $(CONFIG_DIR)) CONFIG_NAME=$(CONFIG_NAME) DEBUG_SERVER_SERIAL=$(DEBUG_SERVER_SERIAL) DEBUG_SERVER_PORT=$(DEBUG_SERVER_PORT) $@
+endif
+endif
+
 zbatch-%: common-zbatch-%
 	make -C ../library/ubinos/make                              OUTPUT_BASE_DIR=$(realpath $(OUTPUT_BASE_DIR)) LIBRARY_DIR=$(realpath $(LIBRARY_DIR)) $@
 	make -C ../library/CMSIS_5_wrapper/make                     OUTPUT_BASE_DIR=$(realpath $(OUTPUT_BASE_DIR)) LIBRARY_DIR=$(realpath $(LIBRARY_DIR)) $@
