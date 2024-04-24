@@ -5,7 +5,7 @@
     "C_Cpp.loggingLevel": "Debug",
     "C_Cpp.default.configurationProvider": "",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/output/Default/compile_commands.json",
-    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.errorSquiggles": "disabled",
     "disasexpl.useBinaryParsing": true,
     "disasexpl.associations": {
         "**/*.S": "${workspaceFolder}/output/Default/app.s",
@@ -13,8 +13,10 @@
         "**/*.cpp": "${workspaceFolder}/output/Default/app.s",
         "**/*.cc": "${workspaceFolder}/output/Default/app.s",
     },
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/output/Default_latex",
     "git.detectSubmodulesLimit": 100,
     "terminal.integrated.scrollback": 10000,
+    "cmake.configureOnOpen": false,
     "files.associations": {
         "ubinos.h": "c"
     }

@@ -15,6 +15,17 @@
             "problemMatcher": [],
         },
         {
+            "label": "make xmgr",
+            "type": "shell",
+            "command": "make",
+            "args": ["xmgr"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
             "label": "make xsel",
             "type": "shell",
             "command": "make",
@@ -191,39 +202,6 @@
             "problemMatcher": [],
         },
         {
-            "label": "make upgrade",
-            "type": "shell",
-            "command": "make",
-            "args": ["upgrade"],
-            "options": {
-                "cwd": "${workspaceFolder}/make"
-            },
-            "group": "build",
-            "problemMatcher": ["$gcc"],
-        },
-        {
-            "label": "make upgradef",
-            "type": "shell",
-            "command": "make",
-            "args": ["upgradef"],
-            "options": {
-                "cwd": "${workspaceFolder}/make"
-            },
-            "group": "build",
-            "problemMatcher": ["$gcc"],
-        },
-        {
-            "label": "make upgradea",
-            "type": "shell",
-            "command": "make",
-            "args": ["upgradea"],
-            "options": {
-                "cwd": "${workspaceFolder}/make"
-            },
-            "group": "build",
-            "problemMatcher": ["$gcc"],
-        },
-        {
             "label": "make reset xrun",
             "type": "shell",
             "command": "make",
@@ -277,6 +255,72 @@
             },
             "group": "build",
             "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "make doc",
+            "type": "shell",
+            "command": "make",
+            "args": ["doc"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "make cleandoc",
+            "type": "shell",
+            "command": "make",
+            "args": ["cleandoc"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "make xopendoc",
+            "type": "shell",
+            "command": "make",
+            "args": ["xopendoc"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "make env",
+            "type": "shell",
+            "command": "make",
+            "args": ["env"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "make cleanenv",
+            "type": "shell",
+            "command": "make",
+            "args": ["cleanenv"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "make test",
+            "type": "shell",
+            "command": "make",
+            "args": ["test"],
+            "options": {
+                "cwd": "${workspaceFolder}/make"
+            },
+            "group": "build",
+            "problemMatcher": [],
         }
     ]
 }
